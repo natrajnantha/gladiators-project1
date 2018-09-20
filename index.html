@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Expense Tracker</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <!-- Firebase  -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+  <!-- Moment.js  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+  <style>
+    #roommate-table th, td {
+      display: inline-block;
+      width: 14%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+<!-- Div for Mike's routine for expense entry -->
+  <div>
+
+  </div>
+
+
+<!-- Driver button for expense entry simulation. Will get replaced with Mike's code during integration -->
+    <button class="btn btn-primary float-right" id="add-expense-btn">Submit</button>
+
+    <div class="row">
+
+      <div class="col-md-12">
+
+
+<!-- Roommate Expense details line items reporting. THis is for Raj's testing, not needed during integration can be skipped -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h3 class="card-title">Current Expenses</h3>
+            <table class="table table-sm table-hover" id='roommate-table'>
+              <thead>
+                <tr>
+                  <th scope="col">Roomate Name</th>
+                  <th scope="col">Item</th>
+                  <th scope="col">Purchase Date</th>
+                  <th scope="col">Purchase Store</th>
+                  <th scope="col">Purchase Loc</th>
+                  <th scope="col">Purchase Rate ($)</th>
+                  <th scope="col">Running total ($)</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+  <!-- Summary div where the Expense tracking summary is reported. Please keep the id name same as below so that the jquery DOM statements
+  are not impacted -->
+          <div class="card mb-4">
+            <div class="card-body">
+              <h3 class="card-title">Summary of Expenses</h3>
+              <div id='summary-table'>
+
+              </div>
+            </div>
+          </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="mytest.js"></script>
+
+</body>
+
+</html>
