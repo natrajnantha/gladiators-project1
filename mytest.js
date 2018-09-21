@@ -10,36 +10,36 @@ var config = {
   };
   
 firebase.initializeApp(config);
-
 var database = firebase.database();
 var expenseRef = database.ref('expensedb/expense');
 var runningTotal = 0;
 var expenseArrayObj = [];
 var numberofentries = 0;
+
+
 // The roommates info master Array. This could be modified to dynamically populate once from the firebase db. Can be used thru out 
 // the web application to populate Name dropdown in Mike's routine and also in the chart sections from Arsh routine. Lets keep this
 // as a hard coded array for now and later depending on time we can always convert to read once during load from firebase.
 var roomUserArray = [{name:"Arsh",amtSpent:0,owes:0},{name:"Raj",amtSpent:0,owes:0},{name:"Mike",amtSpent:0,owes:0},{name:"Patrick",amtSpent:0,owes:0}];
 
-
 // The below submit button is a driver routine to simulate Mike's Expense submit routine. This click event routine would get replaced with Mike's code
 //  during integration
 $("#add-expense-btn").on("click", function(event) {
   event.preventDefault();
-
-var roommateName = "Patrick";
-var item = "Groceries";
-var purchasedate = moment("09/09/2018").format("X");
-var itemRate = 35.00;
-var storeName = "Ralphs";
-var storeLocation = "Woodland Hills";
+ 
+var roommateName = $("#roommate-name-input").val().trim();
+var purchasedate = moment($("#purchase-date-input").val().trim(), "MM/DD/YYYY").format("X");
+var item = $("#purchase-item-input").val().trim();
+var storeName = $("#store-name-input").val().trim();
+var storeLocation = $("#store-location-input").val().trim();
+var itemRate = $("#purchase-cost-input").val().trim();
 
 // This is the datastructure thats heavily used in downstream logic and gets stored in firebase. So keep the variable names same as below
 // in other routines during integration
   var newExpense = {
     name: roommateName,
-    item: item,
     dop: purchasedate,
+    item: item,
     store: storeName,
     location: storeLocation,
     rate: itemRate
@@ -47,6 +47,12 @@ var storeLocation = "Woodland Hills";
 
   expenseRef.push(newExpense);
   console.log("Expense successfully added");
+  console.log("Name : " + roommateName);
+  console.log("DOP " + purchasedate);
+  console.log("item : " + item);
+  console.log("Store Name : " + storeName);
+  console.log("location : " + storeLocation);
+  console.log("Rate : " + itemRate);
 });
 
 

@@ -29,23 +29,98 @@
 <body>
 
   <div class="container">
-
+    <!-- Jumbotron placeholder for Patrick to mod/remove with css -->
+    <div class="jumbotron" style="background-color: black; color: white">
+      <h1 class="text-center">BudgetTron</h1>
+      <h3 class="text-center">A Comprehensive list for Household Expenses.</h3>
+    </div>
 <!-- Div for Mike's routine for expense entry -->
-  <div>
+    <div class="row">
+      <div class="col-md-6">
+        <!--   -->
+        <div class="card mb-4 p-4">
+          <div class="card-body">
+            <h3 class="card-title">Placeholdering for input title</h3>
+        <!-- Entry Form -->
+        <form>
+          <div class="form-group row">
+            <label for="roommate-name-input">Roommate Name</label>
+            <select class="form-control" id="roommate-name-input">
+              <option value="Arsh">Arsh</option>
+              <option value="Mike">Michael</option>
+              <option value="Raj">Natarajan</option>
+              <option value="Patrick">Patrick</option>
+            </select>
+            </div>
+            <div class="form-group row">
+              <label for="purchase-date-input">Purchase Date (MM/DD/YYYY)</label>
+              <input class="form-control" id="purchase-date-input" placeholder="01/08/1989" type="text">
+            </div>
+          <div class="form-group row">
+            <label for="purchase-item-input">Item Name</label>
+            <input class="form-control" id="purchase-item-input" placeholder="Please enter the item name here" type="text">
+          </div>
+          <div class="form-group row">
+              <label for="store-name-input">Store Name</label>
+              <input class="form-control" id="store-name-input" placeholder="Please enter the store name here" type="text">
+            </div>
+          <div class="form-group row">
+              <label for="store-location-input">Store Location</label>
+              <input class="form-control" id="store-location-input" placeholder="Please enter the store location here" type="text">
+            </div>
 
+          <div class="form-group row">
+            <label for="purchase-cost-input">Purchase Amount</label>
+            <input class="form-control" id="purchase-cost-input" placeholder="$00.00" type="text">
+          </div>
+          <button class="btn btn-primary float-right" id="add-expense-btn">Submit</button>
+        </form>
+      </div>
+    </div>
   </div>
+
+  <!--
+  <div class="col-md-5">
+    <div class="card mb-4 p-2">
+      <div class="card-body">
+        <h3 class="card-title">Overall Expense Report</h3>
+      -->
+          <!-- List of results -->
+<!--          <div class="card mb-2 p-2">
+            <div class="card-body">
+               <h4 class="card-title">Household Report:</h4>
+              <div class="group row" id="expenses-monthly-output">Total budget for the month:</div><br>
+              <div class="group row" id="budget-current-month">Current total expenses  for the month:</div><br>
+              <div class="group row" id="budget-remaining-available">Remaining Budget for the month:</div>
+            </div>
+          </div>
+          <div class="card mb-2 p-2">
+            <div class="card-body">
+                <h4 class="card-title">Breakdown by Roommate:</h4>
+                <div class="group row" id="output-arsh">Arsh's Expenses:</div><br>
+                <div class="group row" id="output-mike">Michael's Expenses:</div><br>
+                <div class="group row" id="output-raj">Natarajan's Expenses:</div><br>
+                <div class="group row" id="output-pat">Patrick's Expenses:</div>
+              </div>
+            </div>
+
+        </div>
+      </div>
+  </div>
+</div>
+-->
 
 
 <!-- Driver button for expense entry simulation. Will get replaced with Mike's code during integration -->
-    <button class="btn btn-primary float-right" id="add-expense-btn">Submit</button>
-
-    <div class="row">
+    <!-- <button class="btn btn-primary float-right" id="add-expense-btn">Submit</button>
+-->
+    <div class="row"> 
 
       <div class="col-md-12">
 
 
 <!-- Roommate Expense details line items reporting. THis is for Raj's testing, not needed during integration can be skipped -->
-        <div class="card mb-4">
+        <!-- <div class="card mb-4">
           <div class="card-body">
             <h3 class="card-title">Current Expenses</h3>
             <table class="table table-sm table-hover" id='roommate-table'>
@@ -65,14 +140,14 @@
             </table>
           </div>
         </div>
-
+ -->
 
   <!-- Summary div where the Expense tracking summary is reported. Please keep the id name same as below so that the jquery DOM statements
   are not impacted -->
           <div class="card mb-4">
             <div class="card-body">
               <h3 class="card-title">Summary of Expenses</h3>
-              <div id='summary-table'>
+              <div id="summary-table">
 
               </div>
             </div>
@@ -82,7 +157,7 @@
       </div>
     </div>
   </div>
-
+  </div>
   <!-- JavaScript -->
   <script src="mytest.js"></script>
 
