@@ -20,7 +20,7 @@ var numberofentries = 0;
 // The roommates info master Array. This could be modified to dynamically populate once from the firebase db. Can be used thru out 
 // the web application to populate Name dropdown in Mike's routine and also in the chart sections from Arsh routine. Lets keep this
 // as a hard coded array for now and later depending on time we can always convert to read once during load from firebase.
-var roomUserArray = [{name:"Arsh",amtSpent:2,owes:0},{name:"Raj",amtSpent:2,owes:0},{name:"Mike",amtSpent:2,owes:0},{name:"Patrick",amtSpent:2,owes:0}];
+var roomUserArray = [{name:"Arsh",amtSpent:0,owes:0},{name:"Raj",amtSpent:0,owes:0},{name:"Mike",amtSpent:0,owes:0},{name:"Patrick",amtSpent:0,owes:0}];
 
 // The below submit button is a driver routine to simulate Mike's Expense submit routine. This click event routine would get replaced with Mike's code
 //  during integration
