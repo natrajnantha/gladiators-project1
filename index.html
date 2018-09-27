@@ -26,125 +26,129 @@
 
 </head>
 
+<!-- Google fonts -->
+<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+
+
 <body>
 
+
   <div class="container">
-    
+
     <!-- Jumbotron and Navbar Container -->
     <div class="container jumbonavbar">
-    <div class="jumbotron" id="jumbo-style" style="background-color: black; color: white">
-      <h1 class="text-center">BudgetTron</h1>
-      <h3 class="text-center">Real time Household Expenses shared expense tracking</h3>
-    </div>
+      <div class="jumbotron" id="jumbo-style" style="background-color: black; color: white">
+        <h1 class="text-center">BudgeTron</h1>
+        <h3 class="text-center">Real Time Household Expenses Shared Expense Tracking</h3>
+      </div>
 
-    <nav class="navbar my-navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar my-navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Expense Entry
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Expense Entry
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="reports.html">Reporting</a>
-                    </li>
+              <li class="nav-item">
+                <a class="nav-link" href="reports.html">Reporting</a>
+              </li>
 
-                </ul>
-            </div>
+            </ul>
+          </div>
         </div>
-    </nav>
-  </div>
+      </nav>
+    </div>
 
     <div class="container maincontent">
-    <div class="row">
+      <div class="row">
 
-      
-      <div class="col-md-6" id="expense-entry-area" >
-        <div class="card mb-4 p-4">
-          <div class="card-body">
-            <h3 class="card-title">Expense Entry</h3>
-            <form>
-              <div class="form-group row">
-                <label for="roommate-name-input">Roommate Name</label>
-                <select class="form-control" id="roommate-name-input">
-                  <option value="Arsh">Arsh</option>
-                  <option value="Mike">Michael</option>
-                  <option value="Raj">Natarajan</option>
-                  <option value="Patrick">Patrick</option>
-                </select>
+        <div class="container col-md-6">
+          <div class="" id="expense-entry-area">
+            <div class="card p-4">
+              <div class="card-body">
+                <h3 class="card-title">Expense Entry</h3>
+                <form>
+                  <div class="form-group row">
+                    <label for="roommate-name-input">Roommate Name</label>
+                    <select class="form-control" id="roommate-name-input">
+                      <option value="Arsh">Arsh</option>
+                      <option value="Mike">Michael</option>
+                      <option value="Raj">Natarajan</option>
+                      <option value="Patrick">Patrick</option>
+                    </select>
+                  </div>
+                  <div class="form-group row">
+                    <label for="purchase-date-input">Purchase Date (MM/DD/YYYY)</label>
+                    <input class="form-control" id="purchase-date-input" placeholder="01/08/1989" type="text">
+                  </div>
+                  <div class="form-group row">
+                    <label for="purchase-item-input">Item Name</label>
+                    <input class="form-control" id="purchase-item-input" placeholder="Please enter the item name here"
+                      type="text">
+                  </div>
+                  <div class="form-group row">
+                    <label for="store-name-input">Store Name</label>
+                    <input class="form-control" id="store-name-input" placeholder="Please enter the store name here"
+                      type="text">
+                  </div>
+                  <div class="form-group row">
+                    <label for="store-location-input">Store Location</label>
+                    <input class="form-control" id="store-location-input" placeholder="Please enter the store location here"
+                      type="text">
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="purchase-cost-input">Purchase Amount</label>
+                    <input class="form-control" id="purchase-cost-input" placeholder="$00.00" type="text">
+                  </div>
+                  <button class="btn btn-primary float-right" id="add-expense-btn">Submit</button>
+                </form>
               </div>
-              <div class="form-group row">
-                <label for="purchase-date-input">Purchase Date (MM/DD/YYYY)</label>
-                <input class="form-control" id="purchase-date-input" placeholder="01/08/1989" type="text">
-              </div>
-              <div class="form-group row">
-                <label for="purchase-item-input">Item Name</label>
-                <input class="form-control" id="purchase-item-input" placeholder="Please enter the item name here" type="text">
-              </div>
-              <div class="form-group row">
-                <label for="store-name-input">Store Name</label>
-                <input class="form-control" id="store-name-input" placeholder="Please enter the store name here" type="text">
-              </div>
-              <div class="form-group row">
-                <label for="store-location-input">Store Location</label>
-                <input class="form-control" id="store-location-input" placeholder="Please enter the store location here" type="text">
-              </div>
-
-              <div class="form-group row">
-                <label for="purchase-cost-input">Purchase Amount</label>
-                <input class="form-control" id="purchase-cost-input" placeholder="$00.00" type="text">
-              </div>
-              <button class="btn btn-primary float-right" id="add-expense-btn">Submit</button>
-            </form>
-          </div>
-        </div>
-      </div>
-
-      <!-- ----------------------------------------------------------GOOGLE PIE CHART ------------------------------------------------------- -->
-      
-      <div class="col-md-4">
-          <div id="piechart_3d">
-
-          </div>
-      </div>
-
-
-      <div class="col-md-6" id="summary-table-area">
-        
-        <div class="card" id="breakdowncard">
-          
-            <h3 class="card-title">Summary of Expenses</h3>
-            <div id="summary-table">
-
             </div>
-          
+          </div>
         </div>
-      
 
 
+        <div class="container col-md-6">
+          <!-- ----------------------------------------------------------GOOGLE PIE CHART ------------------------------------------------------- -->
+
+
+          <div id="piechart_3d">
+          </div>
+
+
+          <!-- Expense Summary -->
+          <div id="summary-table-area">
+            <div class="card" id="breakdowncard">
+              <h3 class="card-title">Summary of Expenses</h3>
+              <div id="summary-table">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!--==================================FOOTER=======================================-->
+    <div class="foot">
+      <div class="foot p-1 text-center fixed-bottom">
+        <footer class="small text-white">Copyright Team Gladiator ©</footer>
       </div>
     </div>
 
 
-  </div>
-
-  <!--==================================FOOTER=======================================-->
-  <div class="foot">
-      <div class="foot p-1 text-center fixed-bottom">
-          <footer class="small text-white">Copyright Team Gadiator ©</footer>
-      </div>
-  </div>
-
-
-  <!-- JavaScript -->
-  <script src="javascript/mytest.js"></script>
+    <!-- JavaScript -->
+    <script src="javascript/mytest.js"></script>
 
 </body>
 

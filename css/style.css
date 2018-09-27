@@ -1,4 +1,5 @@
 
+
 #roommate-table th,
 td {
   display: inline-block;
@@ -51,16 +52,16 @@ td {
 }
 
 #summary-table-area {
-    color: #797979;
-    background: #eeeeee;
+    /* color: #797979; */
+    /* background: #eeeeee; */
     font-family: 'Lato', sans-serif;
     /* padding: 0px !important; */
     /* margin: 0px !important; */
     font-size: 14px !important;
-    width: 546px;
-    position: absolute;
-    float: right;
-    margin: 241px 0 0 583px;
+    /* width: 546px; */
+    /* position: absolute; */
+    /* float: right; */
+    /* margin: 241px 0 0 583px; */
     border: 2px solid;
 }
 
@@ -129,7 +130,7 @@ tr {
       border-top: none;
     }
     div#expense-entry-area {
-        margin-left: 15px;
+        margin-left: 0px;
     }
     div#summary-table-area {
         padding: 0;
@@ -145,6 +146,10 @@ tr {
     a.close-modal {
         margin: 13px;
     }
+
+    div#piechart_3d {
+        margin-bottom: 10px;
+    }
     /*=============== FOOTER ==============*/
 .foot {
     background-color: black;  
@@ -153,7 +158,12 @@ tr {
     border-top: solid;
     border-color:#272C31;
 }
-/*==============BACKGROUND==============*/
-/* body {
-    background-image: url(images/skyscraper.png);
-} */
+body{
+    background-image: url(".images/skyscraper.png")
+}
+div#jumbo-style, footer.small.text-white {
+    font-family: 'Orbitron', sans-serif;
+}
+h3.text-center {
+    font-size: 22px;
+}
