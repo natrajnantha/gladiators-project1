@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Expense Tracker</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+  <!-- Moment.js Reference -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+
+  <!-- jQuery Modal (Arsh) ------------------------------->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+  <!-- jQuery Modal (Arsh) ------------------------------->
+
+
+  <style>
+    #roommate-table th,
+    td {
+      display: inline-block;
+      width: 14%;
+    }
+
+
+
+    /* gif/module css(Arsh)------------------------------------------------------------------- */
+    a.listItem {
+      display: inline-block;
+      width: 14%;
+    }
+    img {
+      width: 400px;
+      height: 300px;
+    }
+    .modal a.close-modal {
+      position: absolute;
+      top: 1.5px;
+      right: 4.5px;
+    }
+    .table td,
+    .table th {
+      border-top: none;
+    }
+
+    /* gif/module css(Arsh)------------------------------------------------------------------- */
+  </style>
+
+
+</head>
+
+<body>
+
+  <!-- Employee Tracker -->
+  <div class="container">
+
+    <!-- Jumbotron -->
+    <div class="jumbotron" style="background-color: black; color: white">
+      <h1 class="text-center">Expense Data Management</h1>
+      <h3 class="text-center">Roomate expense details</h3>
+    </div>
+
+
+
+
+
+    <!-- Modal HTML embedded directly into document(Arsh) ------------------------------------->
+    <div id="ex1" class="modal">
+      <div id="gifs-appear-here">
+      </div>
+      <a href="#" rel="modal:close">Close</a>
+    </div>
+    <!-- Modal HTML embedded directly into document(Arsh) ------------------------------------->
+
+
+
+
+    <div class="row">
+
+      <div class="col-md-12">
+
+        <!-- Current Employees-->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h3 class="card-title">Current Expenses</h3>
+            <table class="table table-sm table-hover" id='roommate-table'>
+              <thead>
+                <tr>
+                  <th scope="col">Roomate Name</th>
+                  <th scope="col">Item</th>
+                  <th scope="col">Purchase Date</th>
+                  <th scope="col">Purchase Store</th>
+                  <th scope="col">Purchase Loc</th>
+                  <th scope="col">Purchase Rate ($)</th>
+                  <th scope="col">Running total ($)</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="javascript/reports.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+#roommate-table th,
+td {
+  display: inline-block;
+  width: 14%;
+}
+
+#jumbo-style {
+    padding: 1rem 0rem;
+    margin-bottom: 0rem;
+}
+#expense-entry-area {
+ border: 2px solid;
+ border: 2px solid;
+ margin: 0px 0px 0px 11px;
+ padding: 0px 0 0 0;
+
+}
+.form-group .form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #8e8e93;
+    vertical-align: middle;
+    background-color: #ffffff;
+    border: 1px solid #c7c7cc;
+    border-radius: 4px;  
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  }
+.panel {
+   width: 100%;
+   height: 100%;
+}
+
+#piechart_3d {
+    width: 404px;
+    height: 214px;
+    border: 2px solid;    
+}
+
+#summary-table-area {
+    color: #797979;
+    background: #eeeeee;
+    font-family: 'Lato', sans-serif;
+    /* padding: 0px !important; */
+    /* margin: 0px !important; */
+    font-size: 14px !important;
+    width: 546px;
+    position: absolute;
+    float: right;
+    margin: 241px 0 0 583px;
+    border: 2px solid;
+}
+
+#container {
+
+    width: 100%;
+
+    height: 100%;
+
+}
+.dark-bg {
+    color : #fff;
+    background : #1a2732;
+    background-color : #1a2732;
+  
+}
+
+.dark-bg {
+    background: rgba(54,66,74,1);
+    border-bottom: 1px solid #f1f2f7;
+}
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1002;
+}
+.header, .footer {
+    min-height: 60px;
+    padding: 0 15px;
+}
+
+/* table */
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+tr {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+}
