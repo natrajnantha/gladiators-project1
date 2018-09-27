@@ -1,3 +1,4 @@
+
 #roommate-table th,
 td {
   display: inline-block;
@@ -8,6 +9,14 @@ td {
     padding: 1rem 0rem;
     margin-bottom: 0rem;
 }
+.container.jumbonavbar {
+    padding-bottom: 10px;
+}
+
+.container.maincontent {
+    margin-bottom: 50px;
+}
+
 #expense-entry-area {
  border: 2px solid;
  border: 2px solid;
@@ -93,3 +102,58 @@ tr {
     font-family: "Times New Roman", Times, serif;
     font-size: 15px;
 }
+#roommate-table th,
+    td {
+      display: inline-block;
+      width: 14%;
+    }
+
+
+    /* gif/module */
+
+    a.listItem {
+      display: inline-block;
+      width: 14%;
+    }
+    img {
+      width: 400px;
+      height: 300px;
+    }
+    .modal a.close-modal {
+      position: absolute;
+      top: 1.5px;
+      right: 4.5px;
+    }
+    .table td,
+    .table th {
+      border-top: none;
+    }
+    div#expense-entry-area {
+        margin-left: 15px;
+    }
+    div#summary-table-area {
+        padding: 0;
+    }
+    .card-body {
+        background-color: white;
+    }
+    .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+     
+        width: fit-content;
+
+    }
+    a.close-modal {
+        margin: 13px;
+    }
+    /*=============== FOOTER ==============*/
+.foot {
+    background-color: black;  
+}
+.foot.p-1.text-center.fixed-bottom {
+    border-top: solid;
+    border-color:#272C31;
+}
+/*==============BACKGROUND==============*/
+/* body {
+    background-image: url(images/skyscraper.png);
+} */

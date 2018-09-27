@@ -29,7 +29,9 @@
 <body>
 
   <div class="container">
-    <!-- Jumbotron placeholder for Patrick to mod/remove with css -->
+    
+    <!-- Jumbotron and Navbar Container -->
+    <div class="container jumbonavbar">
     <div class="jumbotron" id="jumbo-style" style="background-color: black; color: white">
       <h1 class="text-center">BudgetTron</h1>
       <h3 class="text-center">Real time Household Expenses shared expense tracking</h3>
@@ -57,11 +59,13 @@
                 </ul>
             </div>
         </div>
-
     </nav>
+  </div>
 
-
+    <div class="container maincontent">
     <div class="row">
+
+      
       <div class="col-md-6" id="expense-entry-area" >
         <div class="card mb-4 p-4">
           <div class="card-body">
@@ -104,6 +108,7 @@
       </div>
 
       <!-- ----------------------------------------------------------GOOGLE PIE CHART ------------------------------------------------------- -->
+      
       <div class="col-md-4">
           <div id="piechart_3d">
 
@@ -112,18 +117,29 @@
 
 
       <div class="col-md-6" id="summary-table-area">
-        <div class="card mb-4">
-          <div class="card-body">
+        
+        <div class="card" id="breakdowncard">
+          
             <h3 class="card-title">Summary of Expenses</h3>
             <div id="summary-table">
 
             </div>
-          </div>
+          
         </div>
+      
 
 
       </div>
     </div>
+
+
+  </div>
+
+  <!--==================================FOOTER=======================================-->
+  <div class="foot">
+      <div class="foot p-1 text-center fixed-bottom">
+          <footer class="small text-white">Copyright Team Gadiator ©</footer>
+      </div>
   </div>
 
 

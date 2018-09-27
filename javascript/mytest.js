@@ -53,7 +53,23 @@ console.log("item : " + item);
 console.log("Store Name : " + storeName);
 console.log("location : " + storeLocation);
 console.log("Rate : " + itemRate);
+
+
+$("#roommate-name-input").val("");
+$("#purchase-date-input").val("");
+$("#purchase-item-input").val("");
+$("#store-name-input").val("");
+$("#store-location-input").val("");
+$("#purchase-cost-input").val("");
+
+
+
+
+// add code=============================================================================================================
+
 });
+
+
 
 
 // The below value event routine computes the amount owed by the room user and also calculates the expense tracking summary that gets appended to the summary-table div. 
