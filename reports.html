@@ -12,6 +12,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
+  <!-- Css -->
+  <link rel="stylesheet" href="css/style.css">
+
   <!-- Firebase Reference -->
   <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
 
@@ -25,50 +28,45 @@
   <!-- jQuery Modal (Arsh) ------------------------------->
 
 
-  <style>
-    #roommate-table th,
-    td {
-      display: inline-block;
-      width: 14%;
-    }
-
-
-
-    /* gif/module css(Arsh)------------------------------------------------------------------- */
-    a.listItem {
-      display: inline-block;
-      width: 14%;
-    }
-    img {
-      width: 400px;
-      height: 300px;
-    }
-    .modal a.close-modal {
-      position: absolute;
-      top: 1.5px;
-      right: 4.5px;
-    }
-    .table td,
-    .table th {
-      border-top: none;
-    }
-
-    /* gif/module css(Arsh)------------------------------------------------------------------- */
-  </style>
-
 
 </head>
 
 <body>
 
-  <!-- Employee Tracker -->
+  
   <div class="container">
 
-    <!-- Jumbotron -->
-    <div class="jumbotron" style="background-color: black; color: white">
-      <h1 class="text-center">Expense Data Management</h1>
-      <h3 class="text-center">Roomate expense details</h3>
-    </div>
+    <!-- Jumbotron and Navbar Container -->
+    <div class="container jumbonavbar">
+        <div class="jumbotron" id="jumbo-style" style="background-color: black; color: white">
+          <h1 class="text-center">BudgetTron</h1>
+          <h3 class="text-center">Real time Household Expenses shared expense tracking</h3>
+        </div>
+    
+        <nav class="navbar my-navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Expense Entry
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link" href="reports.html">Reporting</a>
+                        </li>
+    
+                    </ul>
+                </div>
+            </div>
+        </nav>
+      </div>
 
 
 
@@ -84,7 +82,7 @@
 
 
 
-
+<div class="container">
     <div class="row">
 
       <div class="col-md-12">
@@ -112,6 +110,16 @@
         </div>
       </div>
     </div>
+  </div>
+
+
+  </div>
+
+  <!--==================================FOOTER=======================================-->
+  <div class="foot">
+      <div class="foot p-1 text-center fixed-bottom">
+          <footer class="small text-white">Copyright Team Gadiator ©</footer>
+      </div>
   </div>
 
   <!-- JavaScript -->
