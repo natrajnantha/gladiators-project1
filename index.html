@@ -7,6 +7,9 @@
   <meta charset="UTF-8">
   <title>Expense Tracker</title>
 
+  <!-- Css -->
+  <link rel="stylesheet" href="css/style.css">
+
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -21,34 +24,48 @@
   <!-- GOOGLE CHARTS  -->
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-  <style>
-    #roommate-table th, td {
-      display: inline-block;
-      width: 14%;
-    }
-  </style>
 </head>
 
 <body>
 
-
-
-  
-
   <div class="container">
     <!-- Jumbotron placeholder for Patrick to mod/remove with css -->
-    <div class="jumbotron" style="background-color: black; color: white">
+    <div class="jumbotron" id="jumbo-style" style="background-color: black; color: white">
       <h1 class="text-center">BudgetTron</h1>
-      <h3 class="text-center">A Comprehensive list for Household Expenses.</h3>
+      <h3 class="text-center">Real time Household Expenses shared expense tracking</h3>
     </div>
-    <!-- Div for Mike's routine for expense entry -->
+
+    <nav class="navbar my-navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Expense Entry
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="reports.html">Reporting</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+
     <div class="row">
-      <div class="col-md-7">
-        <!--   -->
+      <div class="col-md-6" id="expense-entry-area" >
         <div class="card mb-4 p-4">
           <div class="card-body">
-            <h3 class="card-title">Placeholdering for input title</h3>
-            <!-- Entry Form -->
+            <h3 class="card-title">Expense Entry</h3>
             <form>
               <div class="form-group row">
                 <label for="roommate-name-input">Roommate Name</label>
@@ -73,8 +90,7 @@
               </div>
               <div class="form-group row">
                 <label for="store-location-input">Store Location</label>
-                <input class="form-control" id="store-location-input" placeholder="Please enter the store location here"
-                  type="text">
+                <input class="form-control" id="store-location-input" placeholder="Please enter the store location here" type="text">
               </div>
 
               <div class="form-group row">
@@ -86,85 +102,16 @@
           </div>
         </div>
       </div>
-      
-      <!------------------------------------------------------------GOOGLE PIE CHART --------------------------------------------------------->
-      <div id="piechart_3d" style="width: 400px; height: 500px;"></div>
 
+      <!-- ----------------------------------------------------------GOOGLE PIE CHART ------------------------------------------------------- -->
+      <div class="col-md-4">
+          <div id="piechart_3d">
 
-
-
-
-
-
-      <!--
-  <div class="col-md-5">
-    <div class="card mb-4 p-2">
-      <div class="card-body">
-        <h3 class="card-title">Overall Expense Report</h3>
-      -->
-      <!-- List of results -->
-      <!--          <div class="card mb-2 p-2">
-            <div class="card-body">
-               <h4 class="card-title">Household Report:</h4>
-              <div class="group row" id="expenses-monthly-output">Total budget for the month:</div><br>
-              <div class="group row" id="budget-current-month">Current total expenses  for the month:</div><br>
-              <div class="group row" id="budget-remaining-available">Remaining Budget for the month:</div>
-            </div>
           </div>
-          <div class="card mb-2 p-2">
-            <div class="card-body">
-                <h4 class="card-title">Breakdown by Roommate:</h4>
-                <div class="group row" id="output-arsh">Arsh's Expenses:</div><br>
-                <div class="group row" id="output-mike">Michael's Expenses:</div><br>
-                <div class="group row" id="output-raj">Natarajan's Expenses:</div><br>
-                <div class="group row" id="output-pat">Patrick's Expenses:</div>
-              </div>
-            </div>
-
-        </div>
-      </div>
-  </div>
-</div>
--->
-
-      <div>
-
       </div>
 
 
-      <!-- Driver button for expense entry simulation. Will get replaced with Mike's code during integration -->
-      <!-- <button class="btn btn-primary float-right" id="add-expense-btn">Submit</button>
-
-    <div class="row"> -->
-
-      <div class="col-md-12">
-
-
-        <!-- Roommate Expense details line items reporting. THis is for Raj's testing, not needed during integration can be skipped -->
-        <!-- <div class="card mb-4">
-          <div class="card-body">
-            <h3 class="card-title">Current Expenses</h3>
-            <table class="table table-sm table-hover" id='roommate-table'>
-              <thead>
-                <tr>
-                  <th scope="col">Roomate Name</th>
-                  <th scope="col">Item</th>
-                  <th scope="col">Purchase Date</th>
-                  <th scope="col">Purchase Store</th>
-                  <th scope="col">Purchase Loc</th>
-                  <th scope="col">Purchase Rate ($)</th>
-                  <th scope="col">Running total ($)</th>
-                </tr>
-              </thead>
-              <tbody>
-              </tbody>
-            </table>
-          </div>
-        </div>
- -->
-
-        <!-- Summary div where the Expense tracking summary is reported. Please keep the id name same as below so that the jquery DOM statements
-  are not impacted -->
+      <div class="col-md-6" id="summary-table-area">
         <div class="card mb-4">
           <div class="card-body">
             <h3 class="card-title">Summary of Expenses</h3>
@@ -179,9 +126,9 @@
     </div>
   </div>
 
-  
+
   <!-- JavaScript -->
-  <script src="mytest.js"></script>
+  <script src="javascript/mytest.js"></script>
 
 </body>
 
