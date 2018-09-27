@@ -159,7 +159,10 @@ tr {
     border-color:#272C31;
 }
 body{
-    background-image: url("..images/skyscraper.png")
+
+    background-image: url("../images/skyscraper.png")
+
+
 }
 div#jumbo-style, footer.small.text-white {
     font-family: 'Orbitron', sans-serif;
