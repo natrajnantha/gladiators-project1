@@ -101,11 +101,11 @@ console.log("Summary Array");
 console.log("-------------");
 console.log("Total spent : " + runningTotal);
 
-var sumStr1$ = $('<h4> Total Expenses so far : ' + runningTotal + '</h4>');
+var sumStr1$ = $('<h4> Total Expenses so far : $' + runningTotal + '</h4>');
 sumStr1$.appendTo('#summary-table');
 
 console.log("Shared expense per member : " + (runningTotal/roomUserArray.length));
-var sumStr1$ = $('<h4> Shared expense per member : ' + (runningTotal/roomUserArray.length) + '</h4>');
+var sumStr1$ = $('<h4> Shared expense per member : $' + (runningTotal/roomUserArray.length) + '</h4>');
 sumStr1$.appendTo('#summary-table');
 
 for (let i = 0; i < roomUserArray.length; i++) {
@@ -116,9 +116,9 @@ for (let i = 0; i < roomUserArray.length; i++) {
   console.log("Name " + roomUserArray[i].name + " spent " + roomUserArray[i].amtSpent + " and owes " + roomUserArray[i].owes);
   console.log(roomUserArray[i].color);
   if (roomUserArray[i].owes < 0) {
-    sumStr1$ = $('<h5><span style = "color:' + roomUserArray[i].color + ' ">' + roomUserArray[i].name + '</span>' + ' spent ' + '<span style = "color: purple">' + roomUserArray[i].amtSpent + '</span>' +' and owes ' + '<span style = "color: ' + colorScale + ' ">' + roomUserArray[i].owes + '</span></h5>');
+    sumStr1$ = $('<h5><span style = "color:' + roomUserArray[i].color + ' ">' + roomUserArray[i].name + '</span>' + ' spent $' + '<span style = "color: purple">' + roomUserArray[i].amtSpent + '</span>' +' and owes $' + '<span style = "color: ' + colorScale + ' ">' + roomUserArray[i].owes + '</span></h5>');
   } else {
-    sumStr1$ = $('<h5><span style = "color:' + roomUserArray[i].color + ' ">' + roomUserArray[i].name +'</span>' + ' spent ' + '<span style = "color: purple">' + roomUserArray[i].amtSpent + '</span>' + ' and to receive ' + '<span style = "color: ' + colorScale + ' ">' + roomUserArray[i].owes + '</span></h5>');
+    sumStr1$ = $('<h5><span style = "color:' + roomUserArray[i].color + ' ">' + roomUserArray[i].name +'</span>' + ' spent $' + '<span style = "color: purple">' + roomUserArray[i].amtSpent + '</span>' + ' and to receive $' + '<span style = "color: ' + colorScale + ' ">' + roomUserArray[i].owes + '</span></h5>');
   }
   sumStr1$.appendTo('#summary-table');
 };
